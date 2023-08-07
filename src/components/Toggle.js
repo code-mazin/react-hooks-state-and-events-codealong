@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 function Toggle() {
-  const [isOn, SetIsOn] = useState(false);
+  const [isOn, setIsOn] = useState(false);
 
   function handleClick() {
-    SetIsOn((isOn) => !isOn);
+    setIsOn((isOn) => !isOn);
   }
 
-  const color = isOn ? "red" : "white"
+  const color = isOn ? "red" : "white";
 
   return (
-    <button style={{ background: color }} onClock={handleClick}>
+    <button style={{ background: color }} onClick={handleClick}>
       {isOn ? "ON" : "OFF"}
     </button>
   );
